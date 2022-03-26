@@ -16,9 +16,10 @@ func main() {
 	router.GET("/user/:name", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 		w.Write([]byte("user name:" + p.ByName("name")))
 	})
-	router.GET("/user/*name", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-		w.Write([]byte("user name:" + p.ByName("name")))
-	})
-
+	/*
+		router.GET("/user/*name", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+			w.Write([]byte("user name:" + p.ByName("name")))
+		})
+	*/
 	http.ListenAndServe(":8083", router)
 }

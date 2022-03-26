@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <smtpServer>smtp.163.com</smtpServer>
+    <smtpPort>25</smtpPort>
+    <sender>zxzthlxf@163.com</sender>
+    <senderPassword>Z@xz820326</senderPassword>
+    <receivers flag="true">
+        <user>zxzthlxf@163.com</user>
+        <user>zxzthlxf@hotmail.com</user>
+    </receivers>
+</config>

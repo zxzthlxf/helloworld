@@ -6,13 +6,13 @@ import (
 	"net/http"
 )
 
-func hi(w http.ResponseWriter, r *http.Request) {
+func hi1(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hi Web")
 }
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/", hi)
+	mux.HandleFunc("/", hi1)
 
 	server := &http.Server{
 		Addr:    ":8081",

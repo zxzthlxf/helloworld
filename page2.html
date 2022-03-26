@@ -1,0 +1,587 @@
+ 
+ 
+ 
+ 
+ 
+    
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>go_站内搜索</title>
+        <link href="/static/css/default.css?v=0.9" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/static/js/baidu-ajax.js"></script>
+        <script type="text/javascript" src="/static/js/statistic.js"></script>
+        <script>
+            //搜全网功能
+            function baidusearch(id) {
+                var url = "http://www.baidu.com/s?ie=utf-8&cus_sid=&tn=SE_pscse_053x7tyx&wd=" + encodeURIComponent(document.getElementById(id).value);
+                window.open(url, "_blank");
+                var bpos;
+                if (id === "kw") {
+                    bpos = "top";
+                }
+                else {
+                    bpos = "bottom";
+                }
+                var pageLog = {};
+                            pageLog["q"] = "go";
+                            pageLog["cc"] = "jb51.net";
+                            pageLog["p"] = "010";
+                            log.send("/api/customsearch/click", pageLog, {
+                    bpos: bpos,
+                    tid: "0",
+                    cc: "jb51.net",
+                    rt: 1
+                });
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="wrap" style="position: relative;">
+                <div id="head" style="" class="clearfix">
+        <div class="s_nav" style="">
+                                                <a href="javascript:void(0)" class="s_logo">
+                        <img src="/static/img/default-logo.png" border="0" id="logo">
+                    </a>
+                                    </div>
+        <div class='fl mt45'>
+            <form name="f" action="site" class="fm" id="bdcs-search-form" >
+                <span class="s_ipt_wr_pre"  id="search_input_container">
+                    <input name="q" id="kw" class="s_ipt" value="go" maxlength="100"
+                           autocomplete="off" style="">
+                    <input name="click" value="1" type="hidden">
+                                                                                                        <input name="cc" value="jb51.net" type="hidden">
+                                                                            </span>
+                <span class="s_btn_wr_pre" style="">
+                    <input name="s" value="" type="hidden">
+                    <input name="nsid" value="" type="hidden">
+                                                                                                                        <input type="submit" id="su" value="搜本站"  class="s_btn_pre" onmousedown="this.className = 's_btn_pre s_btn_h'"
+                           onmouseout="this.className = 's_btn_pre'"> 
+                </span>
+                                                    <span class="s_btn_wr_after" >
+                        <input type="button" id="baidusu" value="搜全网" class="s_btn_after"  onmousedown="this.className = 's_btn_after s_btn_h'"
+                               onmouseout="this.className = 's_btn_after'" onclick="baidusearch('kw');"> 
+                    </span>
+                                            </form>
+
+            <ul id="bdcs-search-sug-list" class="bdcs-search-sug-list"></ul>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+            </script>
+                <div id="container" class="clearfix">
+                <div id="aside" class="aside">
+                    
+
+
+
+
+<div id="left" class="aside-main">
+            <dl class="opt">
+            <dd class="dd-selected">全文搜索</dd>
+            <a class="a-no-selected" href="javascript:cse.util.select('stp','1','type')"><dd class="dd-no-selected">标题搜索</dd></a>
+    </dl>
+    
+    <dl class="opt" id="flt-pubTime">
+                                                                            <dd class="dd-selected">全部时间</dd>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','60','time')"><dd class="dd-no-selected">1小时内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','1440','time')"><dd class="dd-no-selected">1天内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','10080','time')"><dd class="dd-no-selected">1周内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','43200','time')"><dd class="dd-no-selected">1个月内</dd></a>
+                                </dl>   
+
+
+
+<dl class="opt" id="flt-sort">
+                                                    <dd class="dd-selected">默认排序</dd>
+                                    
+                <a class="a-no-selected" href="javascript:cse.util.select('','lds','sort')"><dd class="dd-no-selected">按时间排序</dd></a>
+                    </dl>
+</div>
+<script type="text/javascript" src="/static/js/forum.js"></script>
+<script type="text/javascript">
+    </script>
+                </div>
+                <div id="center" class="content">
+                    <div id="results" class="content-main">
+                                                    <span class="support-text-top">为您找到相关结果1,196,747个</span>
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/224514.htm"  target="_blank"><em>Go</em>语言中的逃逸分析究竟是什么?_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/224514.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t9.baidu.com/it/u=3402937115,1776958826&fm=218&app=126&f=JPEG?w=121&h=75&s=58843C729FD078D214CD91C5030070A0" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                这篇文章主要介绍了<em>Go</em>语言中的逃逸,套哟究竟是什么呢?通俗来讲,当一个对象的指针被多个方法或线程引用时,我们称这个指针发生了“逃逸”。下面文章将详细介绍<em>Go</em>语言中的逃逸,需要的朋友可以参考一下 ...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/2245...htm 2022-2-25</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/56786.htm"  target="_blank"><em>Go</em>语言中的流程控制结构和函数详解_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/56786.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t9.baidu.com/it/u=3724265957,3282174603&fm=218&app=126&f=PNG?w=121&h=75&s=B5B6ED3793E4490B42C5F8E103008033" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                这小节我们要介绍<em>Go</em>里面的流程控制以及函数操作。 流程控制 流程控制在编程语言中是最伟大的发明了,因为有了它,你可以通过很简单的流程描述来表达很复杂的逻辑。<em>Go</em>中流程控制分三大类:条件判断,循环控制和无条件跳转。             </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/567...htm 2022-3-10</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="http://shouce.jb51.net/gopl-zh/ch5/ch5-02.html"  target="_blank">递归| <em>Go</em>语言圣经</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                下文的示例代码使用了非标准包 <em>go</em>lang.org/x/net/html ,解析HTML。<em>go</em>lang.org/x/... 目录下存储了一些由<em>Go</em>团队设计、维护,对网络编程、国际化文件处理、移动平台、图像处理、加密解密、开发者工具提供支持的扩展包。未将这些扩展包...            </div>
+                                                <div>
+                <span class="c-showurl" >shouce.jb51.net/gopl-zh/ch5/ch5-...html 2021-12-7</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/148388.htm"  target="_blank"><em>go</em>语言中strings包的用法汇总_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>Go</em>lang语言 strings标准库包主要涉及字符串的基本操作,下面我们来详细分析下吧 strings 包中的函数和方法 // strings.<em>go</em> --- // Count 计算字符串 sep 在 s 中的非重叠个数 // 如果 sep 为空字符串,则返回 s ...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/1483...htm 2022-3-15</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/62546.htm"  target="_blank"><em>go</em>语言实现抓取高清图片_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>go</em>语言实现抓取高清图片 本文给大家分享的是使用<em>go</em>语言实现的抓取高清美女图片的代码,原理非常简单,这里就不多废话了,主要是看到很多小伙伴使用python实现的,心血来潮就用<em>go</em>写了下,推荐给大家。            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/625...htm 2022-2-26</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/softs/87711.html"  target="_blank"><em>GO</em>桌面(<em>GO</em> Launcher EX) V7.12 加强版 for android(安卓)版 下载-脚本...</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/softs/87711.html" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t8.baidu.com/it/u=3113233020,3107668297&fm=218&app=126&f=GIF?w=121&h=75&s=1870E01264A444BED29435CA030030B0" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                <em>GO</em>桌面(<em>GO</em> Launcher EX):<em>GO</em>桌面是Android系统上最受用户欢迎的桌面替换软件,支持自定义美化桌面及更换主题,操作体验流畅,更有许多贴心实用功能,为你开启全新的手机操作体验!拥有超过千款的<em>GO</em>桌面主题,人性化功能大大填补安卓原生系统的不足...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/softs/877...html 2022-3-10</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/188736.htm"  target="_blank"><em>Go</em> 语言中关于接口的三个_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/188736.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t7.baidu.com/it/u=1422431144,2345094174&fm=218&app=126&f=PNG?w=121&h=75&s=A9C2A3443FA8BB645E71840E0300F0C3" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                我的Github:github.com/iswbm/<em>Go</em>langCodingTime 1. 对方法的调用限制 接口是一组固定的方法集,由于静态类型的限制,接口变量有时仅能调用其中特定的一些方法。 请看下面这段代码 1 2 3             </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/1887...htm 2022-2-24</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/147161.htm"  target="_blank"><em>Go</em>语言的http/2服务器功能及客户端使用_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/147161.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t7.baidu.com/it/u=4094777972,413731987&fm=218&app=126&f=PNG?w=121&h=75&s=02967A23FAFE738C1E7DA0DA0300E0B1" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                <em>Go</em>lang 有一个很棒的自带 http 服务器软件包,不用说就是: net/http, 它非常简单,但是功能非常强大。下面这篇文章主要给大家介绍了关于<em>Go</em>语言的http/2服务器功能及客户端使用的相关资料,需要的朋友可以参考下 ...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/1471...htm 2022-2-19</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/62643.htm"  target="_blank"><em>GO</em>语言实现的http抓包分析工具pproxy介绍_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/62643.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t7.baidu.com/it/u=3383159171,298495511&fm=218&app=126&f=GIF?w=121&h=75&s=EED2811A4D1FF4CA54F81DC80300E0B0" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                难得的是他的作者是中国人,所以说明都是中文的。 总结 pproxy 是一个开源的轻巧的 http 抓包分析工具,尤其适合 API http 请求分析,完全可以替换昂贵的收费工具,同时也可以探索其源码学习 <em>GO</em> 语言,学习 http 协议和分析方法。            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/626...htm 2022-3-14</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/155892.htm"  target="_blank"><em>Go</em>语言字符串高效拼接的实现_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                这种拼接最简单,也最容易被我们使用,因为它是不限编程语言的,比如<em>Go</em>语言有,Java也有,它们是+号运算符,在运行时计算的。 1 2 3 4 var s string s+=&quot;昵称&quot;+&quot;:&quot;+&quot;志强1224&quot;+&quot;\n&quot; ...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/1558...htm 2022-3-4</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                                        </div>
+                </div>
+                    
+                <div class="extra"> 
+                    <div id="right">
+                        
+                                                
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <br clear="all">
+        <div id="footer" class="clearfix" style="">
+        <div class="pager clearfix" id="pageFooter">
+                                        <a href="site?q=go&p=9&cc=jb51.net" class="pager-previous-foot n" >&lt;上一页</a>
+                                                                                                    <a href="site?q=go&p=5&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >6</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=6&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >7</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=7&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >8</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=8&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >9</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=9&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >10</span>
+                        </a>
+                                                            <strong>
+                <span class="fk fk_cur" >
+                    <i class="c-icon c-icon-bear-p"></i>
+                </span>
+                <span class="pager-current-foot" >11</span>
+            </strong>
+                                                                        <a href="site?q=go&p=11&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >12</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=12&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >13</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=13&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >14</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=14&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >15</span>
+                        </a>
+                                                                                            <a href="site?q=go&p=11&cc=jb51.net" class="pager-next-foot n" >下一页&gt;</a>
+                                </div>
+    
+    <div id="BottomBox" style="">
+        <form name="f2" action="site" class="fm" >
+            <span class="s_ipt_wr_pre floatLeft" >  
+            <input name="q" id="kw2" class="s_ipt" value="go" maxlength="100" autocomplete="off" style="">
+                                                                            <input name="cc" value="jb51.net" type="hidden">
+                                                                                    </span>
+            <span class="s_btn_wr_pre floatLeft" style="">
+                <input name="s" value="" type="hidden">							
+                <input name="nsid" value="" type="hidden">
+                                <input type="submit" id="su" value="搜本站"  class="s_btn_pre" onmousedown="this.className='s_btn_pre s_btn_h'"
+                onmouseout="this.className='s_btn_pre'">
+            </span>
+                                    <span class="s_btn_wr_after floatLeft" >
+                <input type="button" id="baidusu" value="搜全网"  class="s_btn_after" onmousedown="this.className='s_btn_after s_btn_h'"
+                onmouseout="this.className='s_btn_after'" onclick="baidusearch('kw2');">
+            </span>
+                                                <span class="support-text leftSpan">搜索技术由</span>
+            <a href="http://zn.baidu.com" target="_blank"><span class="support-logo" ></span></a>
+            <span class="support-text">提供</span>
+                    </form>
+        <form id="f3" name="f3" action="site">
+            <input type="hidden" name="q" value="go">
+                        <input type="hidden" name="s" value="">
+                                                                <input name="cc" value="jb51.net" type="hidden">
+                        
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+(function () {
+    $("#kw2").focus(function () {
+        $(".bottom-box-tips").hide();
+    });
+    $("#kw2").blur(function () {
+        $(".bottom-box-tips").show();
+    });
+})();
+</script>
+
+        <!-- 百度反馈入口 -->
+        <div class="feedback-icon" id="bd-feedback"></div>
+        <script type="text/javascript" src="/static/js/feedback.js"></script>
+    </body>
+
+    <script>
+        var cse = cse || {};
+        cse.param = {
+            'filters': null || {},
+            'sorts': "" || "",
+            'searchType': 0 || "",
+            'searchTimeRange': 0 || "",
+            'dza': "" || "",
+        };
+        cse.util = {
+            'makeParam': function(arr) {
+                var sb = [];
+                for (var key in arr) {
+                    if (arr[key] && typeof (arr[key]) != "function") {
+                        sb.push(key + "=" + encodeURIComponent(arr[key]));
+                    }
+                }
+                return sb.join("&");
+            },
+            'addParam': function(dom, key, value) {
+                if (dom && key && value) {
+                    var ipt = document.createElement("input");
+                    ipt.type = "hidden";
+                    ipt.name = key;
+                    ipt.value = value;
+                    dom.appendChild(ipt);
+                }
+            },
+            'select': function(k, v, action) {
+                if (action == "filter") {
+                    cse.param.filters[k] = v;
+                } else if (action == "sort") {
+                    cse.param.sorts = v;
+                } else if (action == "type") {
+                    cse.param.searchType = v;
+                } else if (action == "time") {
+                    cse.param.searchTimeRange = v;
+                }
+                var filterValue = cse.util.makeParam(cse.param.filters);
+                var f3 = document.getElementById("f3");
+                cse.util.addParam(f3, "flt", filterValue);
+                cse.util.addParam(f3, "srt", cse.param.sorts);
+                cse.util.addParam(f3, "stp", cse.param.searchType);
+                cse.util.addParam(f3, "sti", cse.param.searchTimeRange);
+                cse.util.addParam(f3, "dza", cse.param.dza);
+                f3.submit();
+            },
+            'switchFilter': function(obj) {
+                var id = obj.getAttribute("data-for"),
+                        exp = (obj.getAttribute("data-exp") == "0"),
+                        con = document.getElementById("flt-" + id),
+                        flts = con.getElementsByTagName("DD");
+                for (var i = 0, len = flts.length; i < len; i++) {
+                    var flt = flts[i];
+                    if (exp) {
+                        flt.style.display = "block";
+                    } else {
+                        if (flt.getAttribute("data-limit") == "1") {
+                            flt.style.display = "none";
+                        }
+                    }
+                }
+                obj.setAttribute("data-exp", exp ? "1" : "0");
+                obj.className = exp ? "filterLimitExp" : "filterLimit";
+            }
+        };
+        window.onload = function() {
+            document.forms[0].reset();
+            document.forms[document.forms.length - 1].reset()
+        };
+        $(".result a").click(function() {
+            var pageLog = {};
+                    pageLog

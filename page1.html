@@ -1,0 +1,505 @@
+ 
+ 
+ 
+ 
+ 
+    
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>go_站内搜索</title>
+        <link href="/static/css/default.css?v=0.9" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/static/js/baidu-ajax.js"></script>
+        <script type="text/javascript" src="/static/js/statistic.js"></script>
+        <script>
+            //搜全网功能
+            function baidusearch(id) {
+                var url = "http://www.baidu.com/s?ie=utf-8&cus_sid=&tn=SE_pscse_053x7tyx&wd=" + encodeURIComponent(document.getElementById(id).value);
+                window.open(url, "_blank");
+                var bpos;
+                if (id === "kw") {
+                    bpos = "top";
+                }
+                else {
+                    bpos = "bottom";
+                }
+                var pageLog = {};
+                            pageLog["q"] = "go";
+                            pageLog["cc"] = "jb51.net";
+                            pageLog["p"] = "00";
+                            log.send("/api/customsearch/click", pageLog, {
+                    bpos: bpos,
+                    tid: "0",
+                    cc: "jb51.net",
+                    rt: 1
+                });
+            }
+        </script>
+    </head>
+    <body>
+
+        <div id="wrap" style="position: relative;">
+                <div id="head" style="" class="clearfix">
+        <div class="s_nav" style="">
+                                                <a href="javascript:void(0)" class="s_logo">
+                        <img src="/static/img/default-logo.png" border="0" id="logo">
+                    </a>
+                                    </div>
+        <div class='fl mt45'>
+            <form name="f" action="site" class="fm" id="bdcs-search-form" >
+                <span class="s_ipt_wr_pre"  id="search_input_container">
+                    <input name="q" id="kw" class="s_ipt" value="go" maxlength="100"
+                           autocomplete="off" style="">
+                    <input name="click" value="1" type="hidden">
+                                                                                                        <input name="cc" value="jb51.net" type="hidden">
+                                                                            </span>
+                <span class="s_btn_wr_pre" style="">
+                    <input name="s" value="" type="hidden">
+                    <input name="nsid" value="" type="hidden">
+                                                                                                                        <input type="submit" id="su" value="搜本站"  class="s_btn_pre" onmousedown="this.className = 's_btn_pre s_btn_h'"
+                           onmouseout="this.className = 's_btn_pre'"> 
+                </span>
+                                                    <span class="s_btn_wr_after" >
+                        <input type="button" id="baidusu" value="搜全网" class="s_btn_after"  onmousedown="this.className = 's_btn_after s_btn_h'"
+                               onmouseout="this.className = 's_btn_after'" onclick="baidusearch('kw');"> 
+                    </span>
+                                            </form>
+
+            <ul id="bdcs-search-sug-list" class="bdcs-search-sug-list"></ul>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+            </script>
+                <div id="container" class="clearfix">
+                <div id="aside" class="aside">
+                    
+
+
+
+
+<div id="left" class="aside-main">
+            <dl class="opt">
+            <dd class="dd-selected">全文搜索</dd>
+            <a class="a-no-selected" href="javascript:cse.util.select('stp','1','type')"><dd class="dd-no-selected">标题搜索</dd></a>
+    </dl>
+    
+    <dl class="opt" id="flt-pubTime">
+                                                                            <dd class="dd-selected">全部时间</dd>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','60','time')"><dd class="dd-no-selected">1小时内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','1440','time')"><dd class="dd-no-selected">1天内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','10080','time')"><dd class="dd-no-selected">1周内</dd></a>
+                                                    <a class="a-no-selected" href="javascript:cse.util.select('sti','43200','time')"><dd class="dd-no-selected">1个月内</dd></a>
+                                </dl>   
+
+
+
+<dl class="opt" id="flt-sort">
+                                                    <dd class="dd-selected">默认排序</dd>
+                                    
+                <a class="a-no-selected" href="javascript:cse.util.select('','lds','sort')"><dd class="dd-no-selected">按时间排序</dd></a>
+                    </dl>
+</div>
+<script type="text/javascript" src="/static/js/forum.js"></script>
+<script type="text/javascript">
+    </script>
+                </div>
+                <div id="center" class="content">
+                    <div id="results" class="content-main">
+                                                    <span class="support-text-top">为您找到相关结果1,200,636个</span>
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/189369.htm"  target="_blank">从<em>go</em>语言中找&amp;和*区别详解_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                而且,p指向的地址中的内容就用*p表示。 到此这篇关于从<em>go</em>语言中找&amp;和*区别详解的文章就介绍到这了,更多相关<em>go</em>语言&amp;和*区别内容请搜索脚本之家以前的文章或继续浏览下面的相关文章希望大家以后多多支持脚本之家!            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/1893...htm 2022-2-11</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/shouce/dhtml/methods/go.html"  target="_blank">www.jb51.net/shouce/dhtml/methods/<em>go</em>.html</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                No return value. Remarks An error does not occur if the user tries to <em>go</em> beyond the beginning or end of the history. Instead, the user remains at the current page.  Standards Information ...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/shouce/dhtml/methods/go... 2022-2-10</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="http://shouce.jb51.net/gopl-zh/ch0/ch0-02.html"  target="_blank"><em>Go</em>语言项目 | <em>Go</em>语言圣经</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                所有的编程语言都反映了语言设计者对编程哲学的反思,通常包括之前的语言所暴露的一些不足地方的改进。<em>Go</em>项目是在Google公司维护超级复杂的几个软件系统遇到的一些问题的反思(但是这类问题绝不是Google公司所特有的)。             </div>
+                                                <div>
+                <span class="c-showurl" >shouce.jb51.net/gopl-zh/ch0/ch0-...html 2022-3-25</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="http://shouce.jb51.net/gopl-zh/ch1/ch1-01.html"  target="_blank">Hello, World | <em>Go</em>语言圣经</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>Go</em>语言圣经 1.1. Hello, World 我们以现已成为传统的“hello world”案例来开始吧, 这个例子首次出现于1978年出版的C语言圣经《The C Programming Language》(译注:本书作者之一Brian W. Kernighan也是《The C Programming Language》一...            </div>
+                                                <div>
+                <span class="c-showurl" >shouce.jb51.net/gopl-zh/ch1/ch1-...html 2022-3-25</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="http://edu.jb51.net/go/go-tutorial.html"  target="_blank"><em>Go</em> 语言教程 - <em>Go</em> - 菜鸟学堂-脚本之家</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>Go</em> 语言特色简洁、快速、安全 并行、有趣、开源 内存管理、v数组安全、编译迅速<em>Go</em> 语言用途<em>Go</em> 语言被设计成一门应用于搭载 Web 服务器,存储集群或类似用途的巨型中央服务器的系统编程语言。            </div>
+                                                <div>
+                <span class="c-showurl" >edu.jb51.net/go/go-tutori...html 2022-3-18</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="http://shouce.jb51.net/gopl-zh/ch11/ch11-01.html"  target="_blank"><em>go</em> test | <em>Go</em>语言圣经</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>go</em> test命令是一个按照一定的约定和组织来测试代码的程序。在包目录内,所有以_test.<em>go</em>为后缀名的源文件在执行<em>go</em> build时不会被构建成包的一部分,它们是<em>go</em> test测试的一部分。 在*_test.<em>go</em>文件中,有三种类型的函数:测试函数、基准...            </div>
+                                                <div>
+                <span class="c-showurl" >shouce.jb51.net/gopl-zh/ch11/ch11-... 2022-3-26</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/books/421556.html"  target="_blank">《<em>Go</em>语言编程》高清完整版电子书 pdf版(许式伟 吕桂华) 电子书 下...</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/books/421556.html" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t9.baidu.com/it/u=1865504317,1897734361&fm=218&app=126&f=JPEG?w=121&h=75&s=DA01A14057EDA2FD4263D814030080CA" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                <em>Go</em>语言官方自称,之所以开发<em>Go</em> 语言,是因为“近10年来开发程序之难让我们有点沮丧”。 这一定位暗示了<em>Go</em>语言希望取代C和Java的地位,成为最流行的通用开发语言。 <em>Go</em>语言编程以介绍<em>Go</em>语言特性为主,示例则尽量采用作者开发团队平常的实践,内...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/books/4215...html 2022-3-11</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/list/list_246_1.htm"  target="_blank"><em>Go</em>lang-脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/list/list_246_1.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t9.baidu.com/it/u=796689940,3223875507&fm=218&app=126&f=JPEG?w=121&h=75&s=B1B1C93295D047E35852F853020050E2" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                <em>Go</em>lang 详情&gt;&gt; <em>Go</em>语言是谷歌2009发布的第二款开源编程语言。<em>Go</em>语言专门针对多处理器系统应用程序的编程进行了优化,使用<em>Go</em>编译的程序可以媲美C或C++代码的速度,而且更加安全、支持并行进程。 <em>Go</em>语言是谷歌推出的一种全新的编程语言,可以在...            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/list/list_246...htm 2022-3-21</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+        
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/article/229512.htm"  target="_blank"><em>GO</em>语言基础入门第一个<em>go</em>程序解读_<em>Go</em>lang_脚本之家</a>
+    </h3>
+    <div>
+                <div class="c-image page-pic">
+            <a rpos="" cpos="img" href="https://www.jb51.net/article/229512.htm" target="_blank">
+                <table cellspacing=0 cellpadding=0><tr><td><img src="http://t9.baidu.com/it/u=4288129410,1799857141&fm=218&app=126&f=PNG?w=121&h=75&s=3596EC338BDA79C852411DC903009031" border="0"></td></tr></table>
+            </a>
+        </div>
+                        <div class="c-abstract-image"> 
+                                            <div class="c-abstract" >
+                括号的 &quot;{&quot;必须与func在同一行。不能另起一行 以上就是<em>GO</em>语言基础入门第一个<em>go</em>程序解读的详细内容,更多关于<em>Go</em>语言程序解读的资料请关注脚本之家其它相关文章!            </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/article/2295...htm 2022-3-1</span>
+            </div>
+                    </div>
+        <br clear="both">            </div>
+</div>
+
+                                                            
+
+
+
+
+
+
+
+
+
+<div class="result f s0" >
+    <h3 class="c-title">
+        <a rpos="" cpos="title" href="https://www.jb51.net/w3school/htmldom/met_his_go.htm"  target="_blank">HTML DOM <em>go</em>() 方法</a>
+    </h3>
+    <div>
+                        <div class="c-content">
+                                            <div class="c-abstract" >
+                <em>go</em>() 方法可加载历史列表中的某个具体的页面。 语法 history.<em>go</em>(number|URL) 说明 URL 参数使用的是要访问的 URL,或 URL 的子串。而 number 参数使用的是要访问的 URL 在 History 的 URL 列表中的相对位置。             </div>
+                                                <div>
+                <span class="c-showurl" >www.jb51.net/w3school/htmldom/met_h... 2022-3-3</span>
+            </div>
+                    </div>
+                    </div>
+</div>
+
+                                                                        </div>
+                </div>
+                    
+                <div class="extra"> 
+                    <div id="right">
+                        
+                                                
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <br clear="all">
+        <div id="footer" class="clearfix" style="">
+        <div class="pager clearfix" id="pageFooter">
+                                                                                                                                                                                                                                                                                                                                    <strong>
+                <span class="fk fk_cur" >
+                    <i class="c-icon c-icon-bear-p"></i>
+                </span>
+                <span class="pager-current-foot" >1</span>
+            </strong>
+                                                                        <a href="site?q=go&p=1&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >2</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=2&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >3</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=3&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >4</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=4&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >5</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=5&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >6</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=6&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >7</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=7&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >8</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=8&cc=jb51.net">
+                                                        <span class="fk" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >9</span>
+                        </a>
+                                                                                                            <a href="site?q=go&p=9&cc=jb51.net">
+                                                        <span class="fk fkd" >
+                                                            <i class="c-icon c-icon-bear-pn"></i>
+                            </span>
+                            <span class="pager-normal-foot" >10</span>
+                        </a>
+                                                                                            <a href="site?q=go&p=1&cc=jb51.net" class="pager-next-foot n" >下一页&gt;</a>
+                                </div>
+    
+    <div id="BottomBox" style="">
+        <form name="f2" action="site" class="fm" >
+            <span class="s_ipt_wr_pre floatLeft" >  
+            <input name="q" id="kw2" class="s_ipt" value="go" maxlength="100" autocomplete="off" style="">
+                                                                            <input name="cc" value="jb51.net" type="hidden">
+                                                                                    </span>
+            <span class="s_btn_wr_pre floatLeft" style="">
+                <input name="s" value="" type="hidden">							
+                <input name="nsid" value="" type="hidden">
+                                <input type="submit" id="su" value="搜本站"  class="s_btn_pre" onmousedown="this.className='s_btn_pre s_btn_h'"
+                onmouseout="this.className='s_btn_pre'">
+            </span>
+                                    <span class="s_btn_wr_after floatLeft" >
+                <input type="button" id="baidusu" value="搜全网"  class="s_btn_after" onmousedown="this.className='s_btn_after s_btn_h'"
+                onmouseout="this.className='s_btn_after'" onclick="baidusearch('kw2');">
+            </span>
+                                                <span class="support-text leftSpan">搜索技术由</span>
+            <a href="http://zn.baidu.com" target="_blank"><span class="support-logo" ></span></a>
+            <span class="support-text">提供</span>
+                    </form>
+        <form id="f3" name="f3" action="site">
+            <input type="hidden" name="q" value="go">
+                        <input type="hidden" name="s" value="">
+                                                                <input name="cc" value="jb51.net" type="hidden">
+                        
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+(function () {
+    $("#kw2").focus(function () {
+        $(".bottom-box-tips").hide();
+    });
+    $("#kw2").blur(function () {
+        $(".bottom-box-tips").show();
+    });
+})();
+</script>
+
+        <!-- 百度反馈入口 -->
+        <div class="feedback-icon" id="bd-feedback"></div>
+        <script type="text/javascript" src="/static/js/feedback.js"></script>
+    </body>
+
+    <script>
+        var cse = cse || {};
+        cse.param = {
+            'filters': null || {},
+            'sorts': "" || "",
+            'searchType': 0 || "",
+            'searchTimeRange': 0 || 

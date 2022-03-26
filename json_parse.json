@@ -1,0 +1,9 @@
+{
+  "port": "27017",
+  "mongo": {
+    "mongoAddr": "192.168.8.151",
+    "mongoPoolLimit": 500,
+    "mongoDb": "mydb",
+    "mongoCollection": "table1"
+  }
+}
