@@ -1,0 +1,20 @@
+{
+    "fromDb":{
+        "sqlType":"mysql",
+        "host":"10.80.30.9",
+        "port":3306,
+        "userName":"root",
+        "password":"Poc123123",
+        "database":"fromdb",
+        "charset":"utf8"
+    },
+    "toDb":{
+        "sqlType":"gaussdb",
+        "host":"10.80.30.41",
+        "port":30100,
+        "userName":"godb",
+        "password":"SZtest898",
+        "database":"go_test",
+        "charset":"utf8"        
+    }
+}

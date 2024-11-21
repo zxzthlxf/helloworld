@@ -1,0 +1,106 @@
+---
+
+# 标准帐户行
+# settgroup,settunit,fundacct,secuid,mainseat,market
+# node_settgroup
+NODE_SETTGROUP: "{settgroup},,,0,,,,,0,0,,0"
+
+# node_settunit
+NODE_SETTUNIT: "{settunit},01,{settgroup},0000,03,0000,{settunit},,,RMB,0,0,,,,,{settunit},0,,0,,"
+
+# node_fundacct
+NODE_FUNDACCT: '{fundacct},01,0000,03,,0000,0000,{fundacct},,,,0,*,"0,1,2",0,0,018BC,=,a,=,20141211,0,,0,,,0,,{settgroup}'
+
+# node_fundunit
+NODE_FUNDUNIT: '{fundunit},01,0000,03,0000,{settunit},{fundacct},{fundacct},,,,1,,,"0,1,2",1,20141211,0,,,0,0,,0200,{settgroup}'
+
+# node_stkholdunit
+NODE_STKHOLDUNIT: "{stkholdunit},01,0000,03,0000,{settunit},{fundacct},{fundunit},{fundacct},,,,1,1,1,20141211,0,,,0,0,{settgroup}"
+
+# node_secuid
+NODE_SECUID: "01,run,{fundacct},{market},{secuid},测试{secuid},0,{secuid},03,0000,{mainseat},0,0,20100420,0,0,0,{settgroup},1,0000\n"
+
+# sh_jsmx文件DBF定义
+SH_JSMX_DBF_FIELDS: ('SCDM C(2)', 'JLLX C(3)', 'JYFS C(3)', 'JSFS C(3)', 'YWLX C(3)', 'QSBZ C(3)', 'GHLX C(3)',
+                      'JSBH C(16)', 'CJBH C(16)', 'SQBH C(16)', 'WTBH C(16)', 'JYRQ C(8)', 'QSRQ C(8)', 'JSRQ C(8)',
+                      'QTRQ C(8)', 'WTSJ C(6)', 'CJSJ C(6)', 'XWH1 C(5)', 'XWH2 C(5)', 'XWHY C(8)', 'JSHY C(8)',
+                      'TGHY C(8)', 'ZQZH C(10)', 'ZQDM1 C(6)', 'ZQDM2 C(6)', 'ZQLB C(2)', 'LTLX C(1)', 'QYLB C(2)',
+                      'GPNF C(4)', 'MMBZ C(1)', 'SL C(16)', 'CJSL C(16)', 'ZJZH C(25)', 'BZ C(3)', 'JG1 C(17)',
+                      'JG2 C(17)', 'QSJE C(19)', 'YHS C(17)', 'JSF C(17)', 'GHF C(17)', 'ZGF C(17)', 'SXF C(17)',
+                      'QTJE1 C(19)', 'QTJE2 C(19)', 'QTJE3 C(19)', 'SJSF C(19)', 'JGDM C(4)', 'FJSM C(40)')
+
+# sz_sjsmx1文件DBF定义
+SZ_SJSMX1_DBF_FIELDS: ('MXJSZH C(6)', 'MXBFZH C(25)', 'MXSJLX C(2)', 'MXYWLB C(4)', 'MXZQDM C(8)', 'MXJYDY C(6)',
+                        'MXTGDY C(6)', 'MXZQZH C(20)', 'MXDDBH C(24)', 'MXYYB C(4)', 'MXZXBH C(16)', 'MXYWLSH C(16)',
+                        'MXCJSL N(15,2)', 'MXQSSL N(15,2)', 'MXCJJG N(13,4)', 'MXQSJG N(18,9)', 'MXXYJY C(1)',
+                        'MXPCBS C(1)', 'MXZQLB C(2)', 'MXZQZL C(2)', 'MXGFXZ C(2)', 'MXJSFS C(1)', 'MXHBDH C(3)',
+                        'MXQSBJ N(17,2)', 'MXYHS N(12,2)', 'MXJYJSF N(12,2)', 'MXJGGF N(12,2)', 'MXGHF N(12,2)',
+                        'MXJSF N(12,2)', 'MXSXF N(12,2)', 'MXQSYJ N(12,2)', 'MXQTFY N(12,2)', 'MXZJJE N(17,2)',
+                        'MXSFJE N(18,2)', 'MXCJRQ C(8)', 'MXQSRQ C(8)', 'MXJSRQ C(8)', 'MXFSRQ C(8)', 'MXQTRQ C(8)',
+                        'MXSCDM C(2)', 'MXJYFS C(2)', 'MXZQDM2 C(8)', 'MXTGDY2 C(6)', 'MXDDBH2 C(16)', 'MXCWDH C(4)',
+                        'MXPPHM C(10)', 'MXFJSM C(30)', 'MXBYBZ C(1)')
+
+# 上海买的委托模板
+NODE_TRADE_SH_B: "{sno},01,0000,0000,03,0,{settgroup},{settunit},{fundacct},{fundacct},{fundacct},RMB,{secuid},{secuid},{mainseat},{mainseat},0,B,0,1,0B,,{market}605005,{market},605005,,20230410,2023041009475990,200.0000,17.4600000000,3497.03,,,,,,,,,,,,,{sno},{sno},{sno},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0B,=,F,=,0,,,orderrec,,,,,,,,\n"
+
+# 深圳买的委托模板
+NODE_TRADE_SZ_B: "{sno},01,0000,0000,03,0,{settgroup},{settunit},{fundacct},{fundacct},{fundacct},RMB,{secuid},{secuid},{mainseat},{mainseat},0,B,0,1,0B,,{market}002474,{market},002474,,20230410,2023041009475990,400.0000,11.8500000000,4745.00,,,,,,,,,,,,,{sno},{sno},{sno},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0B,0,*,*,0,,,orderrec,,,,,,,,\n"
+
+# 上海卖的委托模板
+NODE_TRADE_SH_S: "{sno},01,0000,0000,03,0,{settgroup},{settunit},{fundacct},{fundacct},{fundacct},RMB,{secuid},{secuid},{mainseat},{mainseat},0,B,0,1,0S,,{market}605100,{market},605100,,20230410,2023041009475990,400.0000,15.1000000000,0.00,,,,,,,,,,,,,{sno},{sno},{sno},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0S,=,F,=,0,,,orderrec,,,,,,,,\n"
+
+# 深圳卖的委托模板
+NODE_TRADE_SZ_S: "{sno},01,0000,0000,03,0,{settgroup},{settunit},{fundacct},{fundacct},{fundacct},RMB,{secuid},{secuid},{mainseat},{mainseat},0,B,0,1,0S,,{market}000966,{market},000966,,20230410,2023041009475990,1800.0000,4.7500000000,0.00,,,,,,,,,,,,,{sno},{sno},{sno},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0S,.,~,v,0,,,orderrec,,,,,,,,\n"
+
+# 上海买的JSMX
+JSMX_BUY: ('01', '001', '001', '001', '001', '060', '00A', 'SNO', 'SNO',
+            'SNO', '                ', '20230410', '20230410', '20230411', '       0', '      ',
+            '      ', 'MAINSEAT', 'MAINSEAT', 'JS335   ', 'JSX21   ', 'JSX21   ', 'SECUID', '605005',
+            '      ',
+            'PT', '0', '  ', '   0', 'B', '             200', '             200',
+            '040000000000235885       ',
+            'RMB', '     17.460000000', '     17.4600000000', '           -3492.00', '              0',
+            '            -0.17', '            -0.03', '            -0.07', '             0.00',
+            '               0.00', '               0.00', '               0.00', '           -3492.27',
+            '0000',
+            'A股交易清算                             ')
+
+# 深圳买的SJSMX1
+SJSMX1_BUY: ('650101', 'B001650101               ', '01', 'JY00', '002474  ', 'MAINSEAT', 'MAINSEAT',
+              'SECUID', 'SNO', '0000', 'SNO', 'SNO',
+              400.0, 400.0, 11.83, 11.83, ' ', ' ', '00', '  ', '00', 'A', 'RMB', -4732.00, 0.0, -0.23,
+              -0.09, -0.05,
+              0.0, 0.0, 0.0, 0.0, 0.0, -4732.37, '20230410', '20230410', '20230411', '20230410',
+              '        ', '  ',
+              '01', '        ', '      ', '                ', '    ', '          ',
+              '                              ', ' ')
+
+# 上海卖的JSMX
+JSMX_SALE: ('01', '001', '001', '001', '001', '060', '00A', 'SNO', 'SNO',
+             'SNO', '                ', '20230410', '20230410', '20230411', '       0', '      ',
+             '      ', 'MAINSEAT', 'MAINSEAT', 'JSB13   ', 'JSB13   ', '        ', 'SECUID', '605100',
+             '      ',
+             'PT', '0', '  ', '   0', 'S', '         -300.0000', '         -300.0000',
+             '040000000000235885     ',
+             'RMB', '15.1000000000', '15.1000000000', '4530.00', '-4.53',
+             '-0.22', '-0.05', '-0.09', '0.00',
+             '0.00', '0.00', '0.00', '4525.11',
+             '0000',
+             'A股交易清算')
+
+# 深圳卖的SJSMX1
+SJSMX1_SALE: ('060500', 'B001060500', '01', 'JY00', '000966', 'MAINSEAT', 'MAINSEAT',
+               'SECUID', 'SNO', '0000', 'SNO', 'SNO',
+               -300.0, -300.0, 4.75, 4.75, ' ', ' ', '00', '  ', '00', 'A', 'RMB', 1425.00, -1.43, -0.07,
+               -0.03, -0.01,
+               0.00, 0.00, 0.00, 0.00, 0.00, 1423.46, '20230410', '20230410', '20230411', '20230410',
+               '         ', '  ',
+               '01', '        ', '      ', '             ', '    ', '        ',
+               '                         ', ' ')
+
+# 上海余额模板
+STKHOLDBOOKKEEPING_SH: "20230407,01,0000,,03,0,{settunit},RMB,{fundacct},{fundacct},{fundacct},{secuid},{mainseat},0,B,0,1,{market}605100,{market},605100,00,S10001,普通持仓数量,400.0000,400.0000,20230410,,,,{settgroup}\n"
+
+# 深圳余额模板
+STKHOLDBOOKKEEPING_SZ: "20230407,01,0000,,03,0,{settunit},RMB,{fundacct},{fundacct},{fundacct},{secuid},{mainseat},0,B,0,1,{market}000966,{market},000966,00,S10001,普通持仓数量,1800.0000,1800.0000,20230410,,,,{settgroup}\n"
+

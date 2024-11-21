@@ -1,0 +1,19 @@
+{
+    "sqlType":"mysql",
+    "fromDb":{
+        "host":"10.80.30.9",
+        "port":3306,
+        "userName":"root",
+        "password":"Poc123123",
+        "database":"fromdb",
+        "charset":"utf8"
+    },
+    "toDb":{
+        "host":"10.80.30.9",
+        "port":3306,
+        "userName":"root",
+        "password":"Poc123123",
+        "database":"todb",
+        "charset":"utf8"        
+    }
+}

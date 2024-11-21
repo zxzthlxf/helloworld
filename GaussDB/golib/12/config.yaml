@@ -1,0 +1,26 @@
+
+# 一个稍微复杂的例子
+---
+apiVersion: V1
+kind: Pod
+
+abc: aaa
+ 
+metadata:
+  name: redis-stdin
+spec: 
+  containers: 
+  - name: redis 
+    image: redis
+    imagePullPolicy: Always
+    stdin: true
+    ports:
+    - containerPort: 6379
+    - hostPort: 6380
+  - name: mongodb 
+    image: mongo:4.4.3
+    imagePullPolicy: Always
+    stdin: false
+    ports:
+    - containerPort: 27017
+    - hostPort: 27017
